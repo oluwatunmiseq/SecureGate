@@ -25,7 +25,7 @@ model VerificationToken {
   token      String   @unique
   expires    DateTime
 
-  @@unique([identifier, token])
+  @@id([identifier, token])
 }
 
 model PasswordResetToken {
@@ -33,5 +33,5 @@ model PasswordResetToken {
   token   String   @unique
   expires DateTime
 
-  @@unique([email, token])
+  @@id([email, token])
 }
