@@ -1,0 +1,363 @@
+/**
+ * Do not edit directly
+ * Generated automatically by convert-tokens.js from:
+ *   - color-tokens.json
+ *   - design-tokens.tokens.json
+ */
+
+:root {
+  /* ==========================================
+     TYPOGRAPHY TOKENS
+     ========================================== */
+  /* display large */
+  --typography-display-large-font-size: 48px;
+  --typography-display-large-text-decoration: none;
+  --typography-display-large-font-family: 'Urbanist', sans-serif;
+  --typography-display-large-font-weight: 500;
+  --typography-display-large-font-style: normal;
+  --typography-display-large-font-stretch: normal;
+  --typography-display-large-letter-spacing: -1.44px;
+  --typography-display-large-line-height: 76.8px;
+  --typography-display-large-paragraph-indent: 0px;
+  --typography-display-large-paragraph-spacing: 0px;
+  --typography-display-large-text-case: none;
+
+  /* display medium */
+  --typography-display-medium-font-size: 36px;
+  --typography-display-medium-text-decoration: none;
+  --typography-display-medium-font-family: 'Urbanist', sans-serif;
+  --typography-display-medium-font-weight: 500;
+  --typography-display-medium-font-style: normal;
+  --typography-display-medium-font-stretch: normal;
+  --typography-display-medium-letter-spacing: -0.9px;
+  --typography-display-medium-line-height: 57.6px;
+  --typography-display-medium-paragraph-indent: 0px;
+  --typography-display-medium-paragraph-spacing: 0px;
+  --typography-display-medium-text-case: none;
+
+  /* display small */
+  --typography-display-small-font-size: 32px;
+  --typography-display-small-text-decoration: none;
+  --typography-display-small-font-family: 'Urbanist', sans-serif;
+  --typography-display-small-font-weight: 500;
+  --typography-display-small-font-style: normal;
+  --typography-display-small-font-stretch: normal;
+  --typography-display-small-letter-spacing: -0.64px;
+  --typography-display-small-line-height: 51.2px;
+  --typography-display-small-paragraph-indent: 0px;
+  --typography-display-small-paragraph-spacing: 0px;
+  --typography-display-small-text-case: none;
+
+  /* headline large */
+  --typography-headline-large-font-size: 28px;
+  --typography-headline-large-text-decoration: none;
+  --typography-headline-large-font-family: 'Urbanist', sans-serif;
+  --typography-headline-large-font-weight: 500;
+  --typography-headline-large-font-style: normal;
+  --typography-headline-large-font-stretch: normal;
+  --typography-headline-large-letter-spacing: -0.42px;
+  --typography-headline-large-line-height: 44.8px;
+  --typography-headline-large-paragraph-indent: 0px;
+  --typography-headline-large-paragraph-spacing: 0px;
+  --typography-headline-large-text-case: none;
+
+  /* headline medium */
+  --typography-headline-medium-font-size: 24px;
+  --typography-headline-medium-text-decoration: none;
+  --typography-headline-medium-font-family: 'Urbanist', sans-serif;
+  --typography-headline-medium-font-weight: 500;
+  --typography-headline-medium-font-style: normal;
+  --typography-headline-medium-font-stretch: normal;
+  --typography-headline-medium-letter-spacing: -0.312px;
+  --typography-headline-medium-line-height: 38.4px;
+  --typography-headline-medium-paragraph-indent: 0px;
+  --typography-headline-medium-paragraph-spacing: 0px;
+  --typography-headline-medium-text-case: none;
+
+  /* headline small */
+  --typography-headline-small-font-size: 22px;
+  --typography-headline-small-text-decoration: none;
+  --typography-headline-small-font-family: 'Urbanist', sans-serif;
+  --typography-headline-small-font-weight: 500;
+  --typography-headline-small-font-style: normal;
+  --typography-headline-small-font-stretch: normal;
+  --typography-headline-small-letter-spacing: -0.264px;
+  --typography-headline-small-line-height: 35.2px;
+  --typography-headline-small-paragraph-indent: 0px;
+  --typography-headline-small-paragraph-spacing: 0px;
+  --typography-headline-small-text-case: none;
+
+  /* title large */
+  --typography-title-large-font-size: 20px;
+  --typography-title-large-text-decoration: none;
+  --typography-title-large-font-family: 'Urbanist', sans-serif;
+  --typography-title-large-font-weight: 500;
+  --typography-title-large-font-style: normal;
+  --typography-title-large-font-stretch: normal;
+  --typography-title-large-letter-spacing: -0.24px;
+  --typography-title-large-line-height: 32px;
+  --typography-title-large-paragraph-indent: 0px;
+  --typography-title-large-paragraph-spacing: 0px;
+  --typography-title-large-text-case: none;
+
+  /* title medium */
+  --typography-title-medium-font-size: 18px;
+  --typography-title-medium-text-decoration: none;
+  --typography-title-medium-font-family: 'Urbanist', sans-serif;
+  --typography-title-medium-font-weight: 500;
+  --typography-title-medium-font-style: normal;
+  --typography-title-medium-font-stretch: normal;
+  --typography-title-medium-letter-spacing: -0.18px;
+  --typography-title-medium-line-height: 28.8px;
+  --typography-title-medium-paragraph-indent: 0px;
+  --typography-title-medium-paragraph-spacing: 0px;
+  --typography-title-medium-text-case: none;
+
+  /* title small */
+  --typography-title-small-font-size: 18px;
+  --typography-title-small-text-decoration: none;
+  --typography-title-small-font-family: 'Urbanist', sans-serif;
+  --typography-title-small-font-weight: 500;
+  --typography-title-small-font-style: normal;
+  --typography-title-small-font-stretch: normal;
+  --typography-title-small-letter-spacing: -0.18px;
+  --typography-title-small-line-height: 28.8px;
+  --typography-title-small-paragraph-indent: 0px;
+  --typography-title-small-paragraph-spacing: 0px;
+  --typography-title-small-text-case: none;
+
+  /* body large */
+  --typography-body-large-font-size: 18px;
+  --typography-body-large-text-decoration: none;
+  --typography-body-large-font-family: 'Urbanist', sans-serif;
+  --typography-body-large-font-weight: 400;
+  --typography-body-large-font-style: normal;
+  --typography-body-large-font-stretch: normal;
+  --typography-body-large-letter-spacing: -0.162px;
+  --typography-body-large-line-height: 28.8px;
+  --typography-body-large-paragraph-indent: 0px;
+  --typography-body-large-paragraph-spacing: 0px;
+  --typography-body-large-text-case: none;
+
+  /* body medium */
+  --typography-body-medium-font-size: 16px;
+  --typography-body-medium-text-decoration: none;
+  --typography-body-medium-font-family: 'Urbanist', sans-serif;
+  --typography-body-medium-font-weight: 400;
+  --typography-body-medium-font-style: normal;
+  --typography-body-medium-font-stretch: normal;
+  --typography-body-medium-letter-spacing: -0.128px;
+  --typography-body-medium-line-height: 25.6px;
+  --typography-body-medium-paragraph-indent: 0px;
+  --typography-body-medium-paragraph-spacing: 0px;
+  --typography-body-medium-text-case: none;
+
+  /* body small */
+  --typography-body-small-font-size: 14px;
+  --typography-body-small-text-decoration: none;
+  --typography-body-small-font-family: 'Urbanist', sans-serif;
+  --typography-body-small-font-weight: 400;
+  --typography-body-small-font-style: normal;
+  --typography-body-small-font-stretch: normal;
+  --typography-body-small-letter-spacing: -0.112px;
+  --typography-body-small-line-height: 22.4px;
+  --typography-body-small-paragraph-indent: 0px;
+  --typography-body-small-paragraph-spacing: 0px;
+  --typography-body-small-text-case: none;
+
+  /* label large */
+  --typography-label-large-font-size: 14px;
+  --typography-label-large-text-decoration: none;
+  --typography-label-large-font-family: 'Urbanist', sans-serif;
+  --typography-label-large-font-weight: 500;
+  --typography-label-large-font-style: normal;
+  --typography-label-large-font-stretch: normal;
+  --typography-label-large-letter-spacing: -0.112px;
+  --typography-label-large-line-height: 22.4px;
+  --typography-label-large-paragraph-indent: 0px;
+  --typography-label-large-paragraph-spacing: 0px;
+  --typography-label-large-text-case: none;
+
+  /* label medium */
+  --typography-label-medium-font-size: 12px;
+  --typography-label-medium-text-decoration: none;
+  --typography-label-medium-font-family: 'Urbanist', sans-serif;
+  --typography-label-medium-font-weight: 500;
+  --typography-label-medium-font-style: normal;
+  --typography-label-medium-font-stretch: normal;
+  --typography-label-medium-letter-spacing: -0.072px;
+  --typography-label-medium-line-height: 19.2px;
+  --typography-label-medium-paragraph-indent: 0px;
+  --typography-label-medium-paragraph-spacing: 0px;
+  --typography-label-medium-text-case: none;
+
+  /* label small */
+  --typography-label-small-font-size: 10px;
+  --typography-label-small-text-decoration: none;
+  --typography-label-small-font-family: 'Urbanist', sans-serif;
+  --typography-label-small-font-weight: 500;
+  --typography-label-small-font-style: normal;
+  --typography-label-small-font-stretch: normal;
+  --typography-label-small-letter-spacing: -0.04px;
+  --typography-label-small-line-height: 16px;
+  --typography-label-small-paragraph-indent: 0px;
+  --typography-label-small-paragraph-spacing: 0px;
+  --typography-label-small-text-case: none;
+
+  /* ==========================================
+     COLOR ROLES - LIGHT MODE (DEFAULT)
+     ========================================== */
+  --color-primary: hsl(232, 63%, 40%);
+  --color-on-primary: hsl(0, 0%, 100%);
+  --color-primary-container: hsl(234, 100%, 87%);
+  --color-on-primary-container: hsl(232, 62%, 41%);
+  --color-secondary: hsl(229, 68%, 52%);
+  --color-on-secondary: hsl(0, 0%, 100%);
+  --color-secondary-container: hsl(231, 100%, 86%);
+  --color-on-secondary-container: hsl(225, 94%, 39%);
+  --color-tertiary: hsl(225, 63%, 49%);
+  --color-on-tertiary: hsl(0, 0%, 100%);
+  --color-tertiary-container: hsl(229, 100%, 86%);
+  --color-on-tertiary-container: hsl(222, 97%, 36%);
+  --color-error: hsl(349, 65%, 54%);
+  --color-on-error: hsl(354, 100%, 76%);
+  --color-error-container: hsl(356, 100%, 90%);
+  --color-on-error-container: hsl(358, 100%, 93%);
+  --color-background: hsl(270, 20%, 98%);
+  --color-on-background: hsl(210, 7%, 11%);
+  --color-surface: hsl(300, 0%, 100%);
+  --color-on-surface: hsl(0, 0%, 0%);
+  --color-surface-variant: hsl(300, 2%, 89%);
+  --color-on-surface-variant: hsl(210, 2%, 19%);
+  --color-outline: hsl(210, 2%, 19%);
+  --color-outline-variant: hsl(300, 1%, 78%);
+  --color-inverse-surface: hsl(220, 3%, 19%);
+  --color-inverse-on-surface: hsl(280, 11%, 95%);
+  --color-inverse-primary: hsl(234, 100%, 87%);
+  --color-surface-dim: hsl(280, 4%, 86%);
+  --color-surface-bright: hsl(270, 20%, 98%);
+  --color-surface-container-lowest: hsl(0, 0%, 100%);
+  --color-surface-container-low: hsl(270, 9%, 96%);
+  --color-surface-container: hsl(280, 9%, 94%);
+  --color-surface-container-high: hsl(270, 5%, 91%);
+  --color-surface-container-highest: hsl(266, 0%, 96%);
+}
+
+/* ==========================================
+   COLOR ROLES - SYSTEM DARK MODE PREFERENCE
+   ========================================== */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --color-primary: hsl(232, 63%, 40%);
+  --color-on-primary: hsl(230, 92%, 30%);
+  --color-primary-container: hsl(232, 62%, 41%);
+  --color-on-primary-container: hsl(238, 100%, 94%);
+  --color-secondary: hsl(231, 100%, 86%);
+  --color-on-secondary: hsl(225, 100%, 27%);
+  --color-secondary-container: hsl(225, 94%, 39%);
+  --color-on-secondary-container: hsl(235, 100%, 94%);
+  --color-tertiary: hsl(229, 100%, 86%);
+  --color-on-tertiary: hsl(222, 100%, 25%);
+  --color-tertiary-container: hsl(222, 97%, 36%);
+  --color-on-tertiary-container: hsl(231, 100%, 93%);
+  --color-error: hsl(355, 100%, 85%);
+  --color-on-error: hsl(343, 100%, 20%);
+  --color-error-container: hsl(342, 100%, 28%);
+  --color-on-error-container: hsl(358, 100%, 93%);
+  --color-background: hsl(210, 4%, 6.6%);
+  --color-on-background: hsl(270, 4%, 89%);
+  --color-surface: hsl(210, 4%, 6.6%);
+  --color-on-surface: hsl(270, 4%, 89%);
+  --color-surface-variant: hsl(210, 1%, 28%);
+  --color-on-surface-variant: hsl(300, 1%, 78%);
+  --color-outline: hsl(240, 0%, 57%);
+  --color-outline-variant: hsl(210, 1%, 28%);
+  --color-inverse-surface: hsl(270, 4%, 89%);
+  --color-inverse-on-surface: hsl(220, 3%, 19%);
+  --color-inverse-primary: hsl(232, 50%, 51%);
+  --color-surface-dim: hsl(210, 4%, 6.6%);
+  --color-surface-bright: hsl(220, 3%, 22.6%);
+  --color-surface-container-lowest: hsl(210, 3%, 4.4%);
+  --color-surface-container-low: hsl(210, 7%, 11%);
+  --color-surface-container: hsl(212, 6%, 12.6%);
+  --color-surface-container-high: hsl(217, 4%, 16.6%);
+  --color-surface-container-highest: hsl(220, 3%, 20.8%);
+  }
+}
+
+/* ==========================================
+   COLOR ROLES - EXPLICIT THEME OVERRIDES
+   ========================================== */
+[data-theme="light"] {
+  --color-primary: hsl(232, 63%, 40%);
+  --color-on-primary: hsl(0, 0%, 100%);
+  --color-primary-container: hsl(234, 100%, 87%);
+  --color-on-primary-container: hsl(232, 62%, 41%);
+  --color-secondary: hsl(229, 68%, 52%);
+  --color-on-secondary: hsl(0, 0%, 100%);
+  --color-secondary-container: hsl(231, 100%, 86%);
+  --color-on-secondary-container: hsl(225, 94%, 39%);
+  --color-tertiary: hsl(225, 63%, 49%);
+  --color-on-tertiary: hsl(0, 0%, 100%);
+  --color-tertiary-container: hsl(229, 100%, 86%);
+  --color-on-tertiary-container: hsl(222, 97%, 36%);
+  --color-error: hsl(349, 65%, 54%);
+  --color-on-error: hsl(354, 100%, 76%);
+  --color-error-container: hsl(356, 100%, 90%);
+  --color-on-error-container: hsl(358, 100%, 93%);
+  --color-background: hsl(270, 20%, 98%);
+  --color-on-background: hsl(210, 7%, 11%);
+  --color-surface: hsl(300, 0%, 100%);
+  --color-on-surface: hsl(0, 0%, 0%);
+  --color-surface-variant: hsl(300, 2%, 89%);
+  --color-on-surface-variant: hsl(210, 2%, 19%);
+  --color-outline: hsl(210, 2%, 19%);
+  --color-outline-variant: hsl(300, 1%, 78%);
+  --color-inverse-surface: hsl(220, 3%, 19%);
+  --color-inverse-on-surface: hsl(280, 11%, 95%);
+  --color-inverse-primary: hsl(234, 100%, 87%);
+  --color-surface-dim: hsl(280, 4%, 86%);
+  --color-surface-bright: hsl(270, 20%, 98%);
+  --color-surface-container-lowest: hsl(0, 0%, 100%);
+  --color-surface-container-low: hsl(270, 9%, 96%);
+  --color-surface-container: hsl(280, 9%, 94%);
+  --color-surface-container-high: hsl(270, 5%, 91%);
+  --color-surface-container-highest: hsl(266, 0%, 96%);
+}
+
+[data-theme="dark"] {
+  --color-primary: hsl(232, 63%, 40%);
+  --color-on-primary: hsl(230, 92%, 30%);
+  --color-primary-container: hsl(232, 62%, 41%);
+  --color-on-primary-container: hsl(238, 100%, 94%);
+  --color-secondary: hsl(231, 100%, 86%);
+  --color-on-secondary: hsl(225, 100%, 27%);
+  --color-secondary-container: hsl(225, 94%, 39%);
+  --color-on-secondary-container: hsl(235, 100%, 94%);
+  --color-tertiary: hsl(229, 100%, 86%);
+  --color-on-tertiary: hsl(222, 100%, 25%);
+  --color-tertiary-container: hsl(222, 97%, 36%);
+  --color-on-tertiary-container: hsl(231, 100%, 93%);
+  --color-error: hsl(355, 100%, 85%);
+  --color-on-error: hsl(343, 100%, 20%);
+  --color-error-container: hsl(342, 100%, 28%);
+  --color-on-error-container: hsl(358, 100%, 93%);
+  --color-background: hsl(210, 4%, 6.6%);
+  --color-on-background: hsl(270, 4%, 89%);
+  --color-surface: hsl(210, 4%, 6.6%);
+  --color-on-surface: hsl(270, 4%, 89%);
+  --color-surface-variant: hsl(210, 1%, 28%);
+  --color-on-surface-variant: hsl(300, 1%, 78%);
+  --color-outline: hsl(240, 0%, 57%);
+  --color-outline-variant: hsl(210, 1%, 28%);
+  --color-inverse-surface: hsl(270, 4%, 89%);
+  --color-inverse-on-surface: hsl(220, 3%, 19%);
+  --color-inverse-primary: hsl(232, 50%, 51%);
+  --color-surface-dim: hsl(210, 4%, 6.6%);
+  --color-surface-bright: hsl(220, 3%, 22.6%);
+  --color-surface-container-lowest: hsl(210, 3%, 4.4%);
+  --color-surface-container-low: hsl(210, 7%, 11%);
+  --color-surface-container: hsl(212, 6%, 12.6%);
+  --color-surface-container-high: hsl(217, 4%, 16.6%);
+  --color-surface-container-highest: hsl(220, 3%, 20.8%);
+}

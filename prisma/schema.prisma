@@ -1,0 +1,36 @@
+// SecureGate Prisma Schema
+// Exactly 3 models — do not add others without PRD justification.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  password      String
+  emailVerified DateTime?
+  createdAt     DateTime  @default(now())
+}
+
+model VerificationToken {
+  identifier String   // user email
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model PasswordResetToken {
+  email   String
+  token   String   @unique
+  expires DateTime
+
+  @@unique([email, token])
+}
