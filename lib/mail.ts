@@ -1,6 +1,5 @@
 import nodemailer from 'nodemailer';
 
-// Create a transporter singleton
 let transporter: nodemailer.Transporter | null = null;
 
 async function getTransporter(): Promise<nodemailer.Transporter> {
@@ -12,7 +11,6 @@ async function getTransporter(): Promise<nodemailer.Transporter> {
   const pass = process.env.SMTP_PASSWORD;
 
   if (host && user && pass) {
-    // Custom SMTP server configuration (e.g. Mailtrap, Gmail, Custom SMTP)
     transporter = nodemailer.createTransport({
       host,
       port,
@@ -20,7 +18,6 @@ async function getTransporter(): Promise<nodemailer.Transporter> {
       auth: { user, pass },
     });
   } else {
-    // Ethereal fallback for instant development testing
     console.log('✉ [Mailer] Missing SMTP credentials in .env. Creating a temporary Ethereal test mailer account...');
     try {
       const testAccount = await nodemailer.createTestAccount();
@@ -36,7 +33,6 @@ async function getTransporter(): Promise<nodemailer.Transporter> {
       console.log(`✉ [Mailer] Ethereal account generated: User = "${testAccount.user}"`);
     } catch (err) {
       console.error('✉ [Mailer] Failed to create Ethereal test account:', err);
-      // Fallback transporter that doesn't crash the server
       transporter = nodemailer.createTransport({
         jsonTransport: true,
       });
@@ -48,12 +44,16 @@ async function getTransporter(): Promise<nodemailer.Transporter> {
 
 const FROM_EMAIL = process.env.SMTP_FROM || 'SecureGate <noreply@localhost>';
 
+function getBaseUrl(): string {
+  return (
+    process.env.NEXTAUTH_URL ??
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ??
+    'http://localhost:3000'
+  );
+}
+
 type EmailResult = { success: boolean };
 
-/**
- * Sends a verification email with a tokenized link.
- * Returns success/error — never throws.
- */
 export async function sendVerificationEmail({
   to,
   token,
@@ -61,7 +61,7 @@ export async function sendVerificationEmail({
   to: string;
   token: string;
 }): Promise<EmailResult> {
-  const verifyUrl = `${process.env.NEXTAUTH_URL}/verify-email?token=${token}`;
+  const verifyUrl = `${getBaseUrl()}/verify-email?token=${token}`;
 
   try {
     const client = await getTransporter();
@@ -116,10 +116,6 @@ export async function sendVerificationEmail({
   }
 }
 
-/**
- * Sends a password reset email with a tokenized link.
- * Returns success/error — never throws.
- */
 export async function sendPasswordResetEmail({
   to,
   token,
@@ -127,7 +123,7 @@ export async function sendPasswordResetEmail({
   to: string;
   token: string;
 }): Promise<EmailResult> {
-  const resetUrl = `${process.env.NEXTAUTH_URL}/reset-password?token=${token}`;
+  const resetUrl = `${getBaseUrl()}/reset-password?token=${token}`;
 
   try {
     const client = await getTransporter();
