@@ -45,11 +45,10 @@ async function getTransporter(): Promise<nodemailer.Transporter> {
 const FROM_EMAIL = process.env.SMTP_FROM || 'SecureGate <noreply@localhost>';
 
 function getBaseUrl(): string {
-  return (
-    process.env.NEXTAUTH_URL ??
-    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ??
-    'http://localhost:3000'
-  );
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+  return process.env.NEXTAUTH_URL ?? 'http://localhost:3000';
 }
 
 type EmailResult = { success: boolean };
