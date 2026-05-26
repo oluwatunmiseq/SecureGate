@@ -51,17 +51,23 @@ export async function signUpUser(input: unknown): Promise<ActionResult> {
 
     return { success: true };
   } catch (error: unknown) {
-    // Handle duplicate email (Prisma P2002)
-    if (
-      typeof error === 'object' &&
-      error !== null &&
-      'code' in error &&
-      (error as { code: string }).code === 'P2002'
-    ) {
-      return {
-        success: false,
-        error: 'An account with this email already exists.',
-      };
+    if (typeof error === 'object' && error !== null && 'code' in error) {
+      const code = (error as { code: string }).code;
+      // Handle duplicate email
+      if (code === 'P2002') {
+        return {
+          success: false,
+          error: 'An account with this email already exists.',
+        };
+      }
+      // Handle database connection failure
+      if (code === 'P1001' || code === 'P1000') {
+        console.error('[signUpUser] Database connection error:', error);
+        return {
+          success: false,
+          error: 'Service temporarily unavailable. Please try again later.',
+        };
+      }
     }
 
     console.error('[signUpUser]', error);
@@ -133,6 +139,17 @@ export async function signInUser(input: unknown): Promise<ActionResult> {
         error:
           "We couldn't sign you in. Please check your details and try again.",
       };
+    }
+
+    if (typeof error === 'object' && error !== null && 'code' in error) {
+      const code = (error as { code: string }).code;
+      if (code === 'P1001' || code === 'P1000') {
+        console.error('[signInUser] Database connection error:', error);
+        return {
+          success: false,
+          error: 'Service temporarily unavailable. Please try again later.',
+        };
+      }
     }
 
     console.error('[signInUser]', error);

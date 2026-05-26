@@ -55,6 +55,16 @@ export async function forgotPassword(input: unknown): Promise<ActionResult> {
 
     return { success: true };
   } catch (error) {
+    if (typeof error === 'object' && error !== null && 'code' in error) {
+      const code = (error as { code: string }).code;
+      if (code === 'P1001' || code === 'P1000') {
+        console.error('[forgotPassword] Database connection error:', error);
+        return {
+          success: false,
+          error: 'Service temporarily unavailable. Please try again later.',
+        };
+      }
+    }
     console.error('[forgotPassword]', error);
     return {
       success: false,
@@ -107,6 +117,16 @@ export async function resetPassword(input: unknown): Promise<ActionResult> {
 
     return { success: true };
   } catch (error) {
+    if (typeof error === 'object' && error !== null && 'code' in error) {
+      const code = (error as { code: string }).code;
+      if (code === 'P1001' || code === 'P1000') {
+        console.error('[resetPassword] Database connection error:', error);
+        return {
+          success: false,
+          error: 'Service temporarily unavailable. Please try again later.',
+        };
+      }
+    }
     console.error('[resetPassword]', error);
     return {
       success: false,

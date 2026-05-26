@@ -49,6 +49,16 @@ export async function verifyEmail(input: unknown): Promise<ActionResult> {
 
     return { success: true };
   } catch (error) {
+    if (typeof error === 'object' && error !== null && 'code' in error) {
+      const code = (error as { code: string }).code;
+      if (code === 'P1001' || code === 'P1000') {
+        console.error('[verifyEmail] Database connection error:', error);
+        return {
+          success: false,
+          error: 'Service temporarily unavailable. Please try again later.',
+        };
+      }
+    }
     console.error('[verifyEmail]', error);
     return {
       success: false,
@@ -82,6 +92,16 @@ export async function resendVerification(
 
     return { success: true };
   } catch (error) {
+    if (typeof error === 'object' && error !== null && 'code' in error) {
+      const code = (error as { code: string }).code;
+      if (code === 'P1001' || code === 'P1000') {
+        console.error('[resendVerification] Database connection error:', error);
+        return {
+          success: false,
+          error: 'Service temporarily unavailable. Please try again later.',
+        };
+      }
+    }
     console.error('[resendVerification]', error);
     return {
       success: false,

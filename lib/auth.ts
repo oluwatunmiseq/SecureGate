@@ -20,25 +20,29 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
         const { email, password } = parsed.data;
 
-        const user = await db.user.findUnique({
-          where: { email },
-        });
+        try {
+          const user = await db.user.findUnique({
+            where: { email },
+          });
 
-        if (!user) {
+          if (!user) {
+            return null;
+          }
+
+          const passwordMatch = await bcrypt.compare(password, user.password);
+          if (!passwordMatch) {
+            return null;
+          }
+
+          return {
+            id: user.id,
+            email: user.email,
+            name: user.name,
+            emailVerified: user.emailVerified,
+          };
+        } catch {
           return null;
         }
-
-        const passwordMatch = await bcrypt.compare(password, user.password);
-        if (!passwordMatch) {
-          return null;
-        }
-
-        return {
-          id: user.id,
-          email: user.email,
-          name: user.name,
-          emailVerified: user.emailVerified,
-        };
       },
     }),
   ],
