@@ -2,7 +2,7 @@
  **Name:** Quadri Oluwatunmise
   **Cohort:** Design to MVP Bootcamp
    **Live URL:** https://secure-gate-eta.vercel.app/
-    **GitHub Repo:** [Your repo URL]
+    **GitHub Repo:** [\[Your repo URL\]](https://github.com/oluwatunmiseq/SecureGate/tree/main)
 
      -- ## **Part 1 — What I Built**
       I built SecureGate a webapp that prioritizes authentication and security with peatures that protects the user's database and successfully provides a seemless signup, login, verification features
